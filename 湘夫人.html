@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		   <!-- /*1.为什么要写?*/
+			/*不同浏览器缺省的margin和padding，都设成0，避免兼容性问题*/-->
+			<!--2.不要写成*  它会轮询所有的元素，效率低下--> 
+			<!-- /**{
+				margin:0;
+				padding:0;
+			}*/ -->
+			body,div,p,ul,li,dl,dt,dd,h1,a{
+				margin:0;
+				padding:0;
+			}
+			body{
+				font-family:微软雅黑 ,verdana,geneva;sans-serpif;
+			}
+			html,body{
+				background:#2E2E2E;
+			}
+			#header,#banner,#content,#footer{
+				background: #2E2E2E;
+				width: 1176px;
+				margin: 0 auto;
+			}
+			#header{
+				overflow: hidden;
+						}
+						/*1.浮动会让子元素脱离文档流，当所有的元素都脱离时，而与此同时父元素没有设定高度，造成父元素高度变为零，
+                          2.overflow：hidden;会消除所有子元素的浮动，然后进行自适应高度计算，因为父元素没有设定高度，所以不会裁减*/
+			/* #header{
+				width: 1500px;
+				background: #00FF00;
+			} */
+			body{
+				padding-top: 45px;
+			}
+			img{
+				border: none;
+			}
+			/*通常来说，img元素是内联元素，为了能为img设定宽和高，
+			*我们会用display:block来修饰img
+			*如果，img元素被包裹在一个a标签的内部，那么这个a标签也要用dispaly修饰*/
+			#logo{
+				width: 222px;
+				height: 84px;
+				float: left ;
+				background-color: #111111;
+				
+			}
+			#logo a{
+				dispaly:block;
+				width: 222px;
+				height: 84px;
+				
+			}
+			#logo a img{
+				dispaly:block;
+			}
+			#nav {
+				width: 954px;
+				height: 84px;
+				float: left;
+			}
+			#nav li {
+				float: left;
+				list-style: none;
+				
+			}
+			#nav li a{
+				dispaly:block;
+				padding: 0 20px;
+				height: 84px;
+				line-height: 84px;
+				text-align: center;
+				float: left;
+				font-size: 23px;
+				color: #EEEEEE;
+				text-decoration: none;
+				
+				
+			}
+			#nav li a:hover{
+				color:#111111;
+				font-size: 24px;
+				background: #EEEEEE;
+				;
+			}
+			
+			#nav li a.navActive{
+				background:linear-gradient(to bottom,#EEEEEE,#555555);
+				*background: #999999;
+                 /*对IE6而言，第一行，linearxxx不支持，所以显示不出来
+				             第二行，认识*，所以background设为999999
+							 第二行覆盖第一行*/
+				 /*对Chrome而言，第一行支持
+				                第二行不支持*
+								第一行生效*/
+			}
+			#banner{
+			    margin: 10px auto;
+				height: 580px;
+			}
+			#banner a,#banner a img{
+				display: block;
+				width:1176px;
+				height: 580px;
+			}
+			#content{
+				overflow: hidden;
+				background:#EAEAEA ;
+				font-size: 12px;
+				line-height: 24px;
+				
+			}
+			#leftArticle{
+				float: left;
+				margin: 10px;
+				display: inline;
+				/*IE6 double margin left */
+				width: 765px;
+				margin-right: 0;
+				font-size: 24px;
+			}
+			#leftArticle a img ,#rightInfo a img{
+				display: block;
+				width: 765px;
+				height: 467px;
+				
+			}
+			#leftArticle h1{
+				margin:20px 0;
+				/*此处只用margin，不用padding，因如使用padding，需重新设定line-height，做垂直居中用*/
+			}
+			#leftArticle h1 a{
+				color: #900;
+				text-decoration: none;
+				margin-left: 20px;
+			}
+			#leftArticle h1 a: hover{
+				text-decoration: underline;
+				
+			}
+			h1{
+				font-size: 100%;
+				text-align: center;
+				
+			}
+			#leftArticle p{
+				color: #333;
+				text-indent: 2em;
+				font-size: 18px;
+				margin-bottom: 30px;
+				
+				
+			}
+			#rightInfo{
+				float: left;
+				margin: 10px;
+				width: 381px;
+				height: 800px;
+			}
+			#rightInfo dl{
+				margin-bottom: 10px;
+			}
+		     #rightInfo dl dt{
+				 font-size: 14px;
+				 font-weight: bold;
+				 text-indent: 20px;
+				 background: #85CE02;
+				 height:32px;
+				 line-height: 32px;
+				 color:#223867 ;
+			 }
+			 #rightInfo dl dd{
+				 height: 24px;
+				 line-height: 24px;
+				 color: #FFFDFE;
+				 background: #9BB0CB;
+				 text-indent: 16px;
+				 
+			 }
+			 #rightInfo dl dd:last-child{
+				 margin-bottom: 20px;
+			 }
+			 #rightInfo dl dd a{
+				 color: #FFF;
+				 text-decoration: none;
+			 }
+			 #rightInfo dl dd a:hover{
+				 color:#900;
+				 text-decoration: underline;
+			 }
+			 #footer{
+				 background: #393838;
+				 margin-top: 10px;
+				 padding-top: 18px;
+				 height:52px;
+				 line-height: 18px;
+				 color:#CCC;
+				 text-align: center;
+				 font-size: 12px;
+				 margin-bottom: 40px;
+			 }
+			 #footer a{
+				 color: #CCC;
+				 text-decoration: none;
+			 }
+			 #footer a:hover{
+				 text-decoration: underline;
+			 }
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div id="logo">
+							 <a href="#">
+								 <img src="./img/hero.jpg"/>
+								 </a>
+			</div>
+			<div id="nav">
+			     <ul>
+								  <li><a class="navActive" href="#">九歌</a></li>
+								  <li><a href="#">湘君</a></li>
+								  <li><a href="#">河伯</a></li>
+								  <li><a href="#">山鬼</a></li>
+								  <li><a href="#">国殇</a></li>
+								  <li><a href="#">礼魂</a></li>
+								  <li><a href="#">云中君</a></li>
+								  <li><a href="#">大司命</a></li>
+								  <li><a href="#">东皇太一</a></li>
+							  </ul>
+			</div>
+		</div>
+		     
+			 
+		<div id="banner">
+			<a href="#"><img src="./img/xiaose.jpeg"/></a> 
+		</div>
+		        
+		<div id="content">
+			<div id="leftArticle">
+				<a href="#"><img src="./img/帝子降兮.jpg" alt=""/></a>
+				<h1><a href="#">帝子降兮北渚</a></h1>
+				<center><p>帝子降兮北渚，目眇眇兮愁予。<br>
+				袅袅兮秋风，洞庭波兮木叶下。<br>
+				登白薠兮骋望，与佳期兮夕张。<br>
+				鸟何萃兮蘋中，罾何为兮木上？</p>
+				
+				<p>
+				沅有芷兮澧有兰，思公子兮未敢言。<br>
+				荒忽兮远望，观流水兮潺湲。</p>
+				<p>麋何食兮庭中？蛟何为兮水裔？<br>
+                 朝驰余马兮江皋，夕济兮西澨。<br>
+                 闻佳人兮召予，将腾驾兮偕逝。<br>
+                 筑室兮水中，葺之兮荷盖。<br>
+                 荪壁兮紫坛，播芳椒兮成堂。<br>
+                 桂栋兮兰橑，辛夷楣兮药房。<br>
+                 罔薜荔兮为帷，擗蕙櫋兮既张。<br>
+                 白玉兮为镇，疏石兰兮为芳。<br>
+                 芷葺兮荷屋，缭之兮杜衡。<br>
+                 合百草兮实庭，建芳馨兮庑门。<br>
+                 九嶷缤兮并迎，灵之来兮如云。</p>
+              <p>
+				  捐余袂兮江中，遗余褋兮澧浦。<br>
+				  搴汀洲兮杜若，将以遗兮远者。<br>
+				  时不可兮骤得，聊逍遥兮容与。<br>
+			  </p>
+			  </center>
+			</div>
+			<div id="rightInfo">
+				<dl>
+				   <div>
+					   <dt>九歌：屈原十一篇作品的总称。</dt>
+					   <dd>“九”是泛指，非实数，《九歌》本是古乐章名</dd>
+					   <dd><a href="#">湘夫人。舜妃为帝尧之女，故称帝子</a></dd>
+					   <dd>眇眇：望而不见的样子</dd>
+					   <dd>愁予：使我忧愁。</dd>
+					   <dd>袅袅（niǎo）：绵长不绝的样子。</dd>
+					   <dd>波：生波。下：落。</dd>
+					   <dd>薠（fán）：一种近水生的秋草。骋望：纵目而望。</dd>
+					   <dd>佳：佳人，指湘夫人。期：期约。张：陈设。</dd>
+					   <dd>罾（zēng）：捕鱼的网。罾原当在水中，反说在木上，</dd>
+					   <dd>比喻所愿不得，失其应处之所。</dd>
+				    </div>
+				   <div>
+					  <dt>沅：即沅水，在今湖南省。</dt>
+					  <dd>澧（lǐ）：即澧水，在今湖南省，流入洞庭湖。</dd>
+					  <dd>芷（zhǐ）：即白芷，一种香草。</dd>
+					  <dd><a href="#">公子：指湘夫人。古代贵族称公族，</a></dd>
+					  <dd>贵族子女不分性别，都可称“公子”。</dd>
+					  <dd>荒忽：不分明的样子。潺湲：水流的样子。</dd>
+					  <dd>水裔：水边。此名意谓蛟本当在深渊而在水边。比喻所处失常。</dd>
+					  <dd>皋：水边高地。澨（shì）：水边。</dd>
+					  <dd>腾驾：驾着马车奔腾飞驰。偕逝：同往。</dd>
+					  <dd>葺：编草盖房子。盖：指屋顶。</dd>
+					  <dd>荪壁：用荪草饰壁。荪：一种香草。紫：紫贝。坛：中庭。</dd>
+					  <dd>椒：一种科香木。</dd>
+					   <dd>栋：屋栋，屋脊柱。橑（lǎo）：屋椽（chuán）。</dd>
+					 </div>
+					 <div>
+					  <dt>辛夷：木名，初春升花。楣：门上横梁。药：白芷。</dt>
+					   <dd>罔：通“网”，作结解。薜荔；一种香草，缘木而生。帷：帷帐。</dd>
+					  <dd>擗（pǐ）：掰开。蕙：一种香草。櫋（mián）：隔扇。</dd>
+					   <dd>镇：镇压坐席之物。</dd>
+					  <dd>疏：分疏，分陈。石兰：一种香草。</dd>
+					  <dd>缭：缠绕。杜衡：一种香草。</dd>
+					   <dd>合：合聚。百草：指众芳草。实：充实。</dd>
+					  <dd>馨：能够远闻的香。庑（wǔ）：走廊。</dd>
+					  <dd><a href="#">九嶷（yí）：山名，传说中舜的葬地，</a></dd>
+					  <dd>在湘水南。这里指九嶷山神。</dd>
+					  <dd>缤：盛多的样子。灵：神。如云：形容众多。</dd>				
+					  <dd>袂（mèi）：衣袖。</dd>
+				   </div>
+					<div>
+					<dt>褋（dié）：《方言》：禅衣，江淮南楚之间谓之“褋”。</dt>
+					<dd>禅衣即女子内衣，是湘夫人送给湘君的信物。</dd>
+					<dd>这是古时女子爱情生活的习惯。</dd>
+					<dd>汀：水中或水边的平地。杜若：一种香草。</dd>
+					<dd>远者：指湘夫人。</dd>
+					<dd>骤得：数得，屡得。</dd>
+					<dd>逍遥：游玩。容与：悠闲的样子。</dd>
+					</div>
+				</dl>
+			</div>
+		</div>
+		<div id="footer">
+			<p>
+				<a href="#">关于九歌|</a>
+				<a href="#">广告服务|</a>
+				<a href="#">联系我们|</a>
+				<a href="#">版权声明|</a>
+				<a href="#">合作对象</a>
+			</p>
+			<p>
+				<a>京ICP备1111111号</a>
+				All rights(C)2008-2010 Reserved.
+				
+			</p>
+		</div>
+	</body>
+</html>
