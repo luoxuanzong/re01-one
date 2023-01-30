@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial" >
+		<meta charset="utf-8" />
+		<meta name="keywords" content=""/>
+		<title>Home</title>
+		
+		<!--infrastrure CSS-->
+		<link rel="stylesheet" type="text/css" href="css/animate.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all"/>
+		<link rel="stylesheet" type="text/css" href="css/chocolat.css" media="screen"/ >
+		<link rel="stylesheet" type="text/css" href="css/popuo-box.css" media="all"/ >
+		
+		<!--local CSS-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" media="all"/>
+	
+	    <!--JS-->
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<!--Move to behind so the pages load faster-->
+		<!-- <script type="text/javascript" src="js/bootstrap.js"></script> -->
+		<!-- smoth scrolling-->
+		<script type="text/javascript" src="js/easing.js"  ></script>
+		<!--Move to behind so the pages load faster-->
+        <!-- <script type="text/javascript" src="js/jquery.chocolat.js"></script> -->
+		<!--Move to behind so the pages load faster-->
+		<!-- <script type="text/javascript" src="./js/jquery.magnific-popup.js"></script> -->
+		
+		<!--smoth scrolling-->
+		<script type="text/javascript" src="js/move-top.js"></script>
+		<!--Move to behind so the pages load faster-->
+		<!-- <script type="text/javascript" src="js/responsiveslides.min.js"></script> -->
+		<script  type="text/javascript" src="js/wow.min.js"></script>
+		
+		<script type="text/javascript">
+			new WOW().init();
+		</script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($)){
+				$('.scroll').click(function(event){
+					event.preventDefault();
+					console.log(this.hash);
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!--navigation-->
+		
+		<div id="navg" class="top-nav">
+					<div class="container">
+						<div class="navbar-header logo">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<h1 class="wow bounceIn animated" data-wow-delay="0.5s"><a href="index.html">ZZx</a></h1>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-left cl-effect-5">
+								<li class="active"><a href="index.html"><span data-hover="首页">首页</span></a></li>
+								<li><a href="#about" class="scroll"><span data-hover="关于">关于</span></a></li>
+								<li><a href="#service" class="scroll"><span data-hover="服务">服务</span></a></li>
+								<li><a href="#gallery" class="scroll"><span data-hover="图片库">图片库</span></a></li>
+								<li><a href="#contact" class="scroll"><span data-hover="联系我们">联系我们</span></a></li>
+								<li class="phn-no wow fadeInRight animated" data-wow-delay="0.5s"><h4> 400-0000-0000</h4></li>
+							</ul>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+		<!--end navigation-->
+		<!-- banner -->
+		 <div>
+			 <div id="home" class="banner">
+			 <script type="text/javascript" src="js/responsiveslides.min.js"></script> 
+			 <script type="text/javascript">
+				 $(function () {
+								 $("#slider3").responsiveSlides({
+									 auto: true,
+									 pager: false,
+									 nav: false,
+									 speed: 500,
+									 namespace: "callbacks",
+									 before: function () {
+										$('.events').append("<li>before event fired.</li>");
+									 },
+									 after: function () {
+										$('.events').append("<li>after event fired.</li>");
+									 }
+								 });
+							 });
+			 </script>
+             <div id="top" class="callbacks_container">
+						<ul id="slider3" class="rslides">
+							<li>
+								<div class="banner-text-info">
+									<h3 class="bnr-text">XXXXX XXX XXXXXXX XXXXXX <br/><span>Xxxxx xxxx xxxxxx</span> xxxx xxx xx</h3>
+								</div>
+							</li>
+							<li>
+								<div class="banner-text-info">
+									<h3 class="bnr-text">YYYYY YYY XXXXXXX XXXXXX <br/><span>Xxxxx xxxx xxxxxx</span> xxxx xxx xx</h3>
+								</div>
+							</li>
+							<li>
+								<div class="banner-text-info">
+									<h3 class="bnr-text">ZZZZZ ZZZ XXXXXXX XXXXXX <br/><span>Xxxxx xxxx xxxxxx</span> xxxx xxx xx</h3>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="container">
+						<h2 class="WoW fadeInUpBig animated" data-wow-delay="0.5s">UUUU uuuu</h2>
+						<div class="bnr-right">
+							<h4>AAAA AAA AA aaa</h4>
+							<p>BBBB BBB Bbbb</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- end  banner-->
+		<!-- welcome -->
+		<div id="about" class="welcome">
+			<div class="container">
+				<h3 class="title wow fadeInDown">welcome !</h3>
+				<h4 >君子之于射也，内志正，外体直，持弓矢审固，而后可以言中，故古者射以观德。德也者，得之于其心也，君子之学，求以得之于其心，故君子之于射以存其心也。是故躁于其心者其动妄，荡于其心者其视浮，歉于其心者其气馁，忽于其心者其貌惰，傲于其心者其色矜，五者，心之不存也。不存也者，不学也。</h4>
+				<p class="w-text">君子之学于射 以存其心也，是故心端则体正，心敬则容肃，心平则气舒，心专则视审，心通故时而理，心纯故让而恪，心宏故胜而不张、负而不驰，七者备而君子之德成。</p>
+			    <div class="welcome-row">
+					<div class="col-md-4 welcome-grids grid wow zoomIn animated" data-wow-delay="0.5s">
+						<figure class="effect-ming">
+							<img src="images/img1.jpg" alt="">
+							<figcaption>
+								<h5>New<span>Design</span></h5>
+								<p>　君子之于射也，内志正，外体直，持弓矢审固，而后可以言中，故古者射以观德。</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-4 welcome-grids grid wow zoomIn animated" data-wow-delay="0.5s">
+						<figure class="effect-ming">
+							<img src="images/img2.jpg" alt="">
+							<figcaption>
+								<h5>New<span>Design</span></h5>
+								<p>　君子之于射也，内志正，外体直，持弓矢审固，而后可以言中，故古者射以观德。</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="col-md-4 welcome-grids grid wow zoomIn animated" data-wow-delay="0.5s">
+						<figure class="effect-ming">
+							<img src="images/img3.jpg" alt="">
+							<figcaption>
+								<h5>New<span>Design</span></h5>
+								<p>　君子之于射也，内志正，外体直，持弓矢审固，而后可以言中，故古者射以观德。</p>
+							</figcaption>
+						</figure>
+					</div>
+					<div class="clearfix">
+						
+					</div>
+			    </div>
+			</div>
+		</div>
+
+		<!-- end welcome -->
+		<!-- service -->
+		<div>
+			<div id="services" class="services">
+				<div class="col-md-3 services-grids wow zoomIn animated">
+					<div class="flip-effect right">
+						<div class="text-box">
+							<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+							<h5>君子之于射也，内志正</h5>
+							<p class="w-text">君子之于射也，内志正，外体直，持弓矢审固，而后可以言中，故古者射以观德。德也者，得之于其心也，君子之学，求以得之于其心，故君子之于射以存其心也。是故躁于其心者其动妄，荡于其心者其视浮，歉于其心者其气馁，忽于其心者其貌惰，傲于其心者其色矜，五者，心之不存也。不存也者，不学也。</p>
+						</div>
+						<div class="info-box">
+							<div class="info-content">
+								<h5>君子之于射也，内志正，外体直</h5>
+							     <p>君子在射箭时，内心思虑纯正，外形身体正直，手持弓箭稳固有力，这样以后才考虑发射中不中靶的问题。因此古代根据射箭来考察一个人的品德。品德，是来自内心的一种收获。君子治学，是讲究心灵收获的，所以君子在射箭上也是用心的呀。这是由于内心躁动不安的人，他的动作必定是随意的；内心摇摆不定的人，他的视线必定是飘浮的；内心惭愧的人，他的气息必定是微弱的；粗枝大叶的人，他的相貌必定疏懒；内心骄傲的人，他的神色必定矜持。这五种情形，就是失去本心造成的。之所以丧失本心，是因为没有学习。</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grids wow zoomIn animated">
+					<div class="flip-effect right">
+						<div class="text-box">
+							<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+							<h5>君子之学于射，以存其心也，</h5>
+							<p class="w-text">君子之于射也，内志正，外体直，持弓矢审固，而后可以言中，故古者射以观德。德也者，得之于其心也，君子之学，求以得之于其心，故君子之于射以存其心也。是故躁于其心者其动妄，荡于其心者其视浮，歉于其心者其气馁，忽于其心者其貌惰，傲于其心者其色矜，五者，心之不存也。不存也者，不学也。</p>
+						</div>
+						<div class="info-box">
+							<div class="info-content">
+								<h5>君子之学于射，以存其心也</h5>
+							     <p>　君子学习射箭，就是要保留本心。这是因为：内心端正，身体就会正直；内心恭敬，神情就会严肃；内心平静，呼吸就会舒畅；内心专注，视力就会清晰；内心通透，所以能把握时机而作出处理；内心单纯，所以能谦让并严格遵守规矩；内心宽广，所以成功时不会张扬，失败时不会松懈。如果这七者都具备了，那么君子的品德也就形成了。</p>
+						    </div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-3 services-grids wow zoomIn animated">
+					<div class="flip-effect right">
+						<div class="text-box">
+							<span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+							<h5>君子无所不用其学也，于射见之矣</h5>
+							<p class="w-text">君子无所不用其学也，于射见之矣。故曰：为人君者以为君鹄，为人臣者以为臣鹄，为人父者以为父鹄，为人子者以为子鹄。射也者，射己之鹄也，鹄也者，心也，各射己之心也，各得其心而已。故曰：可以观德矣。作《观德亭记》。君子没有不运用所学知识的，在射箭上也能体现出来。所以说：作为别人的君王，就要以君王的标准为目标</p>
+						</div>
+						<div class="info-box">
+							<div class="info-content">
+								<h5>君子无所不用其学也</h5>
+							     <p>　　君子没有不运用所学知识的，在射箭上也能体现出来。所以说：作为别人的君王，就要以君王的标准为目标；作为别人的臣民，就要以臣子的标准为目标；作为别人的父亲，就要以父亲的标准为目标；作为别人的子女，就要以子女的标准为目标。射箭，就是要射中自己的目标；目标，就是自己的本心；每个人都要对准自己的内心，都要获得自己的本心罢了。所以说：射箭可以看出一个人的品德。谨此写下这篇《观德亭记》；</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- end service -->
+		<div>
+			<pre>
+				
+			
+				
+				
+				
+				
+				
+				
+				
+				
+			</pre>
+				<hr>
+		</div>
+		 <script type="text/javascript" src="js/bootstrap.js"></script> 
+	</body>
+</html>
