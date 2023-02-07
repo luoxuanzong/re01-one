@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex布局实践</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* * {
+        border: 1px solid rgb(170, 0, 255);
+      } */
+      .shadow {
+        box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+          0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+      }
+      .flex {
+        display: flex;
+      }
+      .white {
+        background-color: #fff;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+
+      .nav {
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(190, 190, 190);
+        font-size: 14px;
+        color: #666;
+      }
+      @media (max-width: 600px) {
+        .ceBian {
+          display: none;
+        }
+        .content {
+          flex-direction: column;
+        }
+        .data {
+          flex-direction: column;
+        }
+        .mgl8 {
+          margin-left: 8px;
+        }
+        .dataBlock {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+        .content::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!-- 侧边栏 -->
+    <div class="white shadow ceBian" style="width: 200px; z-index: 2">
+      <!-- 头像栏 -->
+      <div
+        class="flex"
+        style="
+          padding: 10px;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid #999;
+        "
+      >
+        <img src="./img/avatar.png" width="100x" height="100x" alt="" />
+        <div>落玄宗</div>
+      </div>
+      <!-- 导航栏 -->
+      <div class="flex1">
+        <div class="nav">首页</div>
+        <div class="nav">读书</div>
+        <div class="nav">书单</div>
+        <div class="nav">演讲</div>
+        <div class="nav">写作</div>
+      </div>
+    </div>
+
+    <!-- 主区域 -->
+    <div class="flex1 flex column">
+      <!-- 头部栏 -->
+      <div style="height: 120px; z-index: 1" class="white shadow"></div>
+      <!-- 内容区 -->
+      <div class="flex1 flex content" style="overflow: auto">
+        <!-- 左区 -->
+        <div style="flex: 3" class="flex column mg8">
+          <!-- 数据区 -->
+          <div class="flex data">
+            <!-- 数据块 -->
+            <div
+              style="height: 100px"
+              class="flex1 white mgr8 shadow dataBlock"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 white mgr8 shadow dataBlock"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 white mgr8 shadow dataBlock"
+            ></div>
+            <div
+              style="height: 100px"
+              class="flex1 white mgr8 shadow dataBlock"
+            ></div>
+          </div>
+          <!-- 列表区 -->
+          <div class="flex column">
+            <!-- 列表项 -->
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+            <div style="height: 160px" class="white mgt8 shadow"></div>
+          </div>
+        </div>
+        <!-- 右区 -->
+        <div style="flex: 1" class="flex column mg8 mgt8 mgl8">
+          <!-- 提示区 -->
+          <div style="height: 150px" class="white shadow"></div>
+          <!-- 消息区 -->
+          <div style="height: 300px" class="white mgt8 shadow"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
